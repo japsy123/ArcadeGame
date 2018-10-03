@@ -22,6 +22,14 @@ Enemy.prototype.render = function() {
 };
 
 // Creating a player class
+class Player{
+    constructor(x,y){
+        this.positionX = x;
+        this.positionY = y;
+        this.sprite = 'images/char-horn-girl.png'
+    }
+
+}
 
 // This class requires an update(), render() and
 // a handleInput() method.
