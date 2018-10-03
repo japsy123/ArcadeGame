@@ -21,7 +21,8 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-// Now write your own player class
+// Creating a player class
+
 // This class requires an update(), render() and
 // a handleInput() method.
 
