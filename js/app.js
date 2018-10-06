@@ -5,6 +5,8 @@ var Enemy = function() {
     this.x = 0;
     this.y = 0;
     this.horizontal = 101;
+    this.reset = -this,horizontal;
+    this.limit = this.horizontal *4;
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
@@ -21,7 +23,6 @@ Enemy.prototype.update = function(dt) {
         this.x += 180*dt;
 
     }
-
     else{
         this.x=0;
     }
