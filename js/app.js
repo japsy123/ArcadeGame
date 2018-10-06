@@ -5,6 +5,7 @@ var Enemy = function(x,y,speed) {
     this.x = x;
     this.y = y-13;
     this.horizontal = 101;
+    // Using this variable to vary the speed of different enemeies
     this.speed = speed;
     this.reset = -this.horizontal;
     this.limit = this.horizontal *4;
@@ -48,7 +49,9 @@ class Player{
 
     //Updating Player Position
     update(){
+        // Check for collisons
 
+        //Check for Win Condition
     }
 
     render(){
@@ -95,7 +98,6 @@ const allEnemies =[enemy1,enemy2,enemy3];
 
 // Place the player object in a variable called player
 const player = new Player();
-// const enemy = new Enemy();
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
