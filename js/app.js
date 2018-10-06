@@ -16,6 +16,15 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+    // Adding 70 so that it makes the enemy leave completlely the block
+    if(this.x < this.horizontal *4 + 70){
+        this.x += 180*dt;
+
+    }
+
+    else{
+        this.x=0;
+    }
 };
 
 // Draw the enemy on the screen, required method for game
