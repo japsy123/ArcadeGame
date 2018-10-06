@@ -27,7 +27,9 @@ class Player{
     constructor(){
         this.positionX = 0;
         this.positionY = 0;
-        this.sprite = 'images/char-horn-girl.png'
+        this.sprite = 'images/char-horn-girl.png';
+        this.upDown = 83;
+        this.leftRight = 101;
     }
 
     //Updating Player Position
@@ -41,10 +43,7 @@ class Player{
     }
 
     handleInput(keyCode){
-        if(keyCode === 'right'){
-            this.positionX += 100;
-            console.log(this.positionX)
-        }
+        
         
     }
 
