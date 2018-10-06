@@ -1,9 +1,9 @@
 // Enemies our player must avoid
-var Enemy = function() {
+var Enemy = function(x,y) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
-    this.x = 0;
-    this.y = -13;
+    this.x = x;
+    this.y = y-13;
     this.horizontal = 101;
     this.reset = -this.horizontal;
     this.limit = this.horizontal *4;
@@ -21,7 +21,6 @@ Enemy.prototype.update = function(dt) {
     // Adding 70 so that it makes the enemy leave completlely the block
     if(this.x < this.horizontal *4 + 70){
         this.x += 180*dt;
-
     }
     else{
         this.x=this.reset;
