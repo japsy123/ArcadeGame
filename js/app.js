@@ -47,7 +47,9 @@ class Player{
         
         switch(keyCode){
             case 'left':
-                this.positionX -= this.leftRight;
+                if(this.positionX>0){
+                    this.positionX -= this.leftRight;
+                }
                 break;
             case 'right':
                 this.positionX += this.leftRight;
@@ -59,6 +61,7 @@ class Player{
                 this.positionY += this.upDown;
                 break;
         }
+        console.log(this.positionX + ' ' + this.positionY)
     }
 
 }
