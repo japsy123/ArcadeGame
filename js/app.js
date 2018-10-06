@@ -60,7 +60,9 @@ class Player{
                 this.positionY -= this.upDown;
                 break;
             case 'down':
-                this.positionY += this.upDown;
+                if(this.positionY < 408){
+                    this.positionY += this.upDown;
+                }
                 break;
         }
         console.log(this.positionX + ' ' + this.positionY)
