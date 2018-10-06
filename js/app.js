@@ -25,8 +25,9 @@ Enemy.prototype.render = function() {
 class Player{
     // Constrcutor for Player class for initializing its properites
     constructor(){
-        this.positionX = 0;
-        this.positionY = 0;
+        // Defining initial positions for Player
+        this.positionX = 202;
+        this.positionY = 408;
         this.sprite = 'images/char-horn-girl.png';
         // Variables for Player movement top/down and sideways 
         this.upDown = 83;
@@ -57,10 +58,8 @@ class Player{
             case 'down':
                 this.positionY += this.upDown;
                 break;
-
         }
     }
-
 
 }
 
@@ -72,7 +71,6 @@ class Player{
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 const player = new Player();
-
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
