@@ -3,7 +3,7 @@ var Enemy = function() {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
     this.x = 0;
-    this.y = 0;
+    this.y = -13;
     this.horizontal = 101;
     this.reset = -this.horizontal;
     this.limit = this.horizontal *4;
