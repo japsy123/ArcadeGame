@@ -57,7 +57,10 @@ class Player{
                 }
                 break;
             case 'up':
-                this.positionY -= this.upDown;
+                if(this.positionY>0){
+                    this.positionY -= this.upDown;
+
+                }
                 break;
             case 'down':
                 if(this.positionY < 408){
