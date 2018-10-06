@@ -51,9 +51,16 @@ class Player{
     update(){
         // Check for collisons
         for(let enemy of allEnemies){
+
+            
             console.log(this.positionY + " enemy pos--> " +enemy.y)
         }
         //Check for Win Condition
+    }
+
+    reset(){
+        this.positionX = 0;
+        this.positionY = 0;
     }
 
     render(){
