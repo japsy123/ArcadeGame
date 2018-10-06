@@ -43,8 +43,9 @@ class Player{
         ctx.drawImage(Resources.get(this.sprite), this.positionX, this.positionY);
     }
 
+    // This method handles palyer movements when the arrow keys are pressed on the keyboard.
+    // The if blocls are used to define boundries to restrict palyer movements within game board
     handleInput(keyCode){
-        
         switch(keyCode){
             case 'left':
                 if(this.positionX > 0){
@@ -59,7 +60,6 @@ class Player{
             case 'up':
                 if(this.positionY>0){
                     this.positionY -= this.upDown;
-
                 }
                 break;
             case 'down':
@@ -68,19 +68,22 @@ class Player{
                 }
                 break;
         }
-        console.log(this.positionX + ' ' + this.positionY)
+        // console.log(this.positionX + ' ' + this.positionY)
     }
 
 }
 
-// This class requires an update(), render() and
-// a handleInput() method.
-
-
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
+const enemy1 = new Enemy();
+const enemy2 = new Enemy();
+const enemy3 = new Enemy();
+
+const allEnemies =[enemy1,enemy2,enemy3];
+
 // Place the player object in a variable called player
 const player = new Player();
+// const enemy = new Enemy();
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
