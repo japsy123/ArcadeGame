@@ -40,7 +40,11 @@ class Player{
         
     }
 
-    handleInput(){
+    handleInput(keyCode){
+        if(keyCode === 37){
+            this.positionX += 10;
+            console.log(this.positionX)
+        }
         
     }
 
