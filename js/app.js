@@ -40,7 +40,7 @@ class Player{
     constructor(){
         // Defining initial positions for Player
         this.positionX = 202;
-        this.positionY = 408;
+        this.positionY = 402;
         this.sprite = 'images/char-horn-girl.png';
         // Variables for Player movement top/down and sideways 
         this.upDown = 83;
