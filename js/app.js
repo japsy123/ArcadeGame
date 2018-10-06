@@ -1,10 +1,11 @@
 // Enemies our player must avoid
-var Enemy = function(x,y) {
+var Enemy = function(x,y,speed) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
     this.x = x;
     this.y = y-13;
     this.horizontal = 101;
+    this.speed = speed;
     this.reset = -this.horizontal;
     this.limit = this.horizontal *4;
     // The image/sprite for our enemies, this uses
