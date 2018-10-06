@@ -50,7 +50,9 @@ class Player{
     //Updating Player Position
     update(){
         // Check for collisons
-
+        for(let enemy of allEnemies){
+            console.log(this.positionY + " enemy pos--> " +enemy.y)
+        }
         //Check for Win Condition
     }
 
@@ -91,8 +93,8 @@ class Player{
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 const enemy1 = new Enemy(-101,83,190);
-const enemy2 = new Enemy(-130,160,200);
-const enemy3 = new Enemy(-110,230,230);
+const enemy2 = new Enemy(-130,166,200);
+const enemy3 = new Enemy(-110,249,230);
 
 const allEnemies =[enemy1,enemy2,enemy3];
 
