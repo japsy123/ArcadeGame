@@ -28,6 +28,7 @@ class Player{
         this.positionX = 0;
         this.positionY = 0;
         this.sprite = 'images/char-horn-girl.png';
+        // Variables for Player movement top/down and sideways 
         this.upDown = 83;
         this.leftRight = 101;
     }
@@ -39,12 +40,25 @@ class Player{
 
     render(){
         ctx.drawImage(Resources.get(this.sprite), this.positionX, this.positionY);
-        
     }
 
     handleInput(keyCode){
         
-        
+        switch(keyCode){
+            case 'left':
+                this.positionX -= this.leftRight;
+                break;
+            case 'right':
+                this.positionX += this.leftRight;
+                break;
+            case 'up':
+                this.positionY -= this.upDown;
+                break;
+            case 'down':
+                this.positionY += this.upDown;
+                break;
+
+        }
     }
 
 
