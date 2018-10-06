@@ -24,9 +24,9 @@ Enemy.prototype.render = function() {
 // Creating a player class
 class Player{
     // Constrcutor for Player class for initializing its properites
-    constructor(x,y){
-        this.positionX = x;
-        this.positionY = y;
+    constructor(){
+        this.positionX = 0;
+        this.positionY = 0;
         this.sprite = 'images/char-horn-girl.png'
     }
 
