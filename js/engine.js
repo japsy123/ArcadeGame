@@ -25,6 +25,9 @@ var Engine = (function(global) {
         lastTime,
         id;
 
+    const modal = document.querySelector('.modal');
+    const playAgain = document.querySelector('.replay');
+
     canvas.width = 505;
     canvas.height = 606;
     doc.body.appendChild(canvas);
