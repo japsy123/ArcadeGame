@@ -45,6 +45,7 @@ class Player{
         // Variables for Player movement top/down and sideways 
         this.upDown = 83;
         this.leftRight = 101;
+        this.playerWon = false;
     }
 
     //Updating Player Position
@@ -60,7 +61,8 @@ class Player{
         }
         //Check for Win Condition when player reaches the water tile
         if(this.positionY === -13){
-            console.log("Win")
+            // console.log("Win")
+            this.playerWon = true;
         }
     }
 
