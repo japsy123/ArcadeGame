@@ -24,7 +24,8 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime,
         id;
-
+        
+    // Declaring variables which will come into action when Games ends
     const modal = document.querySelector('.modal');
     const playAgain = document.querySelector('.replay');
 
@@ -68,7 +69,7 @@ var Engine = (function(global) {
 
         }
     }
-
+    // Adding eventListener method when player clicks Replay button
     playAgain.addEventListener('click',function(){
         player.reset();
         modal.classList.toggle('hide');
