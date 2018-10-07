@@ -51,16 +51,19 @@ class Player{
     update(){
         // Check for collisons
         for(let enemy of allEnemies){
-
             
-            console.log(this.positionY + " enemy pos--> " +enemy.y)
+            if(this.positionY === enemy.y && (enemy.x +70 >= this.positionX && enemy.x <= this.positionX +40)){
+
+                this.reset();
+            }
+            
         }
         //Check for Win Condition
     }
 
     reset(){
-        this.positionX = 0;
-        this.positionY = 0;
+        this.positionX = 202;
+        this.positionY = 402;
     }
 
     render(){
@@ -87,7 +90,7 @@ class Player{
                 }
                 break;
             case 'down':
-                if(this.positionY < 408){
+                if(this.positionY < 402){
                     this.positionY += this.upDown;
                 }
                 break;
@@ -99,9 +102,9 @@ class Player{
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
-const enemy1 = new Enemy(-101,83,190);
+const enemy1 = new Enemy(-120,83,200);
 const enemy2 = new Enemy(-130,166,200);
-const enemy3 = new Enemy(-110,249,230);
+const enemy3 = new Enemy(-110,249,200);
 
 const allEnemies =[enemy1,enemy2,enemy3];
 
