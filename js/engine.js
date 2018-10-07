@@ -61,12 +61,20 @@ var Engine = (function(global) {
          */
         if(player.playerWon === true){
             win.cancelAnimationFrame(id);
+            modal.classList.toggle('hide');
         }
         else{
             id = win.requestAnimationFrame(main);
 
         }
     }
+
+    playAgain.addEventListener('click',function(){
+        player.reset();
+        modal.classList.toggle('hide');
+        player.playerWon = false;
+        win.requestAnimationFrame(main);
+    })
 
     /* This function does some initial setup that should only occur once,
      * particularly setting the lastTime variable that is required for the
