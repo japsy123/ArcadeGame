@@ -56,9 +56,12 @@ class Player{
 
                 this.reset();
             }
-            
+            // console.log(this.positionY)
         }
-        //Check for Win Condition
+        //Check for Win Condition when player reaches the water tile
+        if(this.positionY === -13){
+            console.log("Win")
+        }
     }
 
     reset(){
